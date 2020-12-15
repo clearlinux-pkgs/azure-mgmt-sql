@@ -4,7 +4,7 @@
 #
 Name     : azure-mgmt-sql
 Version  : 0.18.0
-Release  : 8
+Release  : 9
 URL      : https://files.pythonhosted.org/packages/30/10/4c8bbf2307201652110882768fa32503d220e3ad5a509ff5cd76e5385294/azure-mgmt-sql-0.18.0.zip
 Source0  : https://files.pythonhosted.org/packages/30/10/4c8bbf2307201652110882768fa32503d220e3ad5a509ff5cd76e5385294/azure-mgmt-sql-0.18.0.zip
 Summary  : Microsoft Azure SQL Management Client Library for Python
@@ -75,8 +75,8 @@ echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
 echo ----[ mark ]----
 ## Remove excluded files
-rm -f %{buildroot}/usr/lib/python3.9/site-packages/azure/mgmt/__init__.py
-rm -f %{buildroot}/usr/lib/python3.9/site-packages/azure/mgmt/__pycache__/__init__.cpython-38.pyc
+rm -f %{buildroot}/usr/lib/python3*/site-packages/azure/mgmt/__init__.py
+rm -f %{buildroot}/usr/lib/python3*/site-packages/azure/mgmt/__pycache__/__init__.cpython-3*.pyc
 
 %files
 %defattr(-,root,root,-)
